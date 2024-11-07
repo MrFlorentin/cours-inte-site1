@@ -220,7 +220,21 @@ nav a:nth-child(4){
 }
 
 
+footer {
+	display: flex;
+	background-color:#04482D;	
+	color:#fff;
+	padding: 50px;
+	justify-content: flex-end;
+	/* Tout ce qui est dans le footer est positioné à la fin par défaut */
+	gap: 600px;
+	/* On fait un gap entre les 2 éléments donc h4 et p ici */
+}
 
+footer h4,p {
+	transform: translateX(-125px);
+	/* On redécale de la droite vers la gauche */
+}
 
 
 
