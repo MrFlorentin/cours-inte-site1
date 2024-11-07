@@ -134,17 +134,41 @@ hr{
 
 
 
+/* Navbar */
+nav{
+	background: var(--green);
+	display: flex;
+	height: 4.86em;
+	border-radius: 0 0 var(--radius) var(--radius);
+}
 
+nav a{
+	display: flex;
+	font-size: 1.5em;
+	align-items: center;
+	left: 100px;
+	color: var(--white);
+}
 
+nav a:nth-child(1){
+	margin-left: 130px;
+}
 
+nav a:nth-child(2){
+	margin-left: 740px;
+	font-size: 1.15em;
+}
 
+nav a:nth-child(3),
+nav a:nth-child(4){
+	margin-left: 58px;
+	font-size: 1.15em;
+}
 
-
-
-
-
-
-
+.icon-facebook.white{
+	width: 32px;
+  	height: 32px;
+}
 
 @media screen and (max-width: 1350px){
 	.container{
