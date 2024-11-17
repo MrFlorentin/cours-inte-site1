@@ -217,8 +217,8 @@ header{ /* Zone du header */
 }
 
 .icon-youtube {
-    fill: var(--green); /* Remplace par une couleur CSS personnalisée */
-    position: absolute; /* Si nécessaire, pour le placer au-dessus de l'image */
+    fill: var(--green);
+    position: absolute;
 	transform: scale(3.5);
 }
 
