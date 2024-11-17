@@ -222,11 +222,32 @@ header{ /* Zone du header */
 	transform: scale(3.5);
 }
 
-
 .icon-youtube:hover{
 	fill: var(--yellow);
 }
 
+/* Section "Allez, viens !" */
+.sec-8{
+	background: var(--green);
+	height: 100%;
+}
+
+.join-us{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-us h1{
+	color: var(--white);
+	font-size: 10.8rem;
+	line-height: 100%;
+	padding: 0 0 6.25rem 0;
+}
+
+.join-us iframe{
+	border-radius: var(--radius);
+}
 
 @media screen and (max-width: 1350px){
 	.container{
