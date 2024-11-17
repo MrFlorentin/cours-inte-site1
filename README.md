@@ -3,7 +3,7 @@
 
 Cours de Nicolas dans le cadre d'un TP sur un site à intégrer en HTML & CSS.
 
-À rendre pour le 26 Novembre 2024 - MyDigitalSchool
+À rendre pour le 6 Décembre 2024 - MyDigitalSchool
 
 
 
