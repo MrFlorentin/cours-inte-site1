@@ -1,4 +1,3 @@
-
 /*BASE*/
 
 *,::after,::before{
@@ -9,7 +8,8 @@
 }
 
 :root{
-	--base-px:10px;
+	--base-px: 10px;
+	--grid-gap: 2.5rem;
 
 	--green:#04482D;
 	--dark-green:#033B25;
@@ -24,24 +24,30 @@
 .grid{
 	display: flex;
 	flex-flow: wrap;
-	gap: var(--grid-gap)
+	gap: var(--grid-gap);
+	justify-content: space-between;
 }
 
-.grid.col-4 >*{
-    flex-basis: calc( (100% - var(--grid-gap) * 3) / 4 );
+.row{
+	display: grid;
+	grid-template-columns: repeat(12, 2fr);
+	grid-template-rows: auto;
+	align-items: center;
+	height: auto;
 }
 
-.grid.col-3 >*{
-    flex-basis: calc( (100% - var(--grid-gap) * 2) / 3 );
-}
-
-.grid.col-2 >*{
-    flex-basis: calc( (100% - var(--grid-gap) * 1) / 2 );
-}
-
-.grid.col-1 >*{
-    flex-basis: calc( (100% - var(--grid-gap) * 1) / 1 );
-}
+.col-1{grid-column: span 1;}
+.col-2{grid-column: span 2;}
+.col-3{grid-column: span 3;}
+.col-4{grid-column: span 4;}
+.col-5{grid-column: span 5;}
+.col-6{grid-column: span 6;}
+.col-7{grid-column: span 7;}
+.col-8{grid-column: span 8;}
+.col-9{grid-column: span 9;}
+.col-10{grid-column: span 10;}
+.col-11{grid-column: span 11;}
+.col-12{grid-column: span 12;}
 
 html{
 	font-size: var(--base-px);
@@ -73,6 +79,36 @@ hr{
 	height: .05rem;
 }
 
+.btn{
+    font-size: 1.6rem;
+    display: flex;
+    padding: 1rem 2rem;
+    background: var(--green);
+    color: black;
+    border-radius: var(--radius);
+	justify-content: center;
+    align-items: center;
+}
+
+.white-box{
+	font-size: 2rem;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: var(--white);
+    color: black;
+    border-radius: var(--radius);
+}
+
+.classic-btn{
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--green);
+    color: black;
+    border-radius: var(--radius);
+	justify-content: center;
+    align-items: center;
+}
 
 /*COMPONENTS*/
 
@@ -157,37 +193,109 @@ hr{
 header{ /* Zone du header */
 	background: var(--green);
 	display: flex;
-	height: 4.86em;
+	height: 4.5em;
 	border-radius: 0 0 var(--radius) var(--radius);
-	justify-content: space-between;
-	align-items: center;
 	position: sticky;
+	align-items: center;
+	justify-content: center;
   	top: 0;
   	z-index: 100;
+}
+
+.header{
+	align-items: center;
 }
 
 .super-agence-title{
 	color: var(--white);
 	font-size: 2.8rem;
-	padding: 13rem;
+	display: inline-block;
+	align-items: center;
 }
 
-.header-links{
-	padding: 13rem;
+.header-right{
 	display: flex;
-	gap: 2.2rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
 }
 
-.header-links a{
-	font-size: 2.2rem;
+.header-text a{
+	margin: 2rem;
 	color: var(--white);
-	margin: 1.55rem;
-	align-content: center;
+	font-size: 2.2rem;
 }
 
 .header-icons{
-	align-content: center;
 	transform: scale(1.1);
+}
+
+.header-icons a{
+	margin: 1rem;
+}
+
+.hbg{
+	display: none;
+}
+
+.hbg span{
+	display: none;
+}
+
+
+
+/* Section "Agence Top Méga Cool !" */
+
+.sec-6firstcol{
+	grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.btn_rocket{
+	display: inline-flex;
+	gap: 1rem;
+	justify-content: start;
+}
+
+.btn_rocket .btn{
+	gap: 2rem;
+}
+
+.sec-1-title{
+	color: var(--green);
+	font-size: 7rem;
+	line-height: 12rem;
+}
+
+.sec-1-subtitle span{
+	color: var(--dark-grey);
+	font-size: 3rem;
+}
+
+.sec-1-btn span:first-child{
+	color: white;
+	padding: 1.5rem 3.5rem;
+	margin: 0 1rem 0 0;
+}
+
+.sec-1-btn span:last-child{
+	color: var(--green);
+	background: var(--yellow);
+	padding: 1.5rem 3.5rem;
+}
+
+.sec-1-image{
+	display: flex;
+    overflow: hidden;
+}
+
+.sec-1-image img{
+	border-radius: var(--radius);
+	width: 80%; /* S'adapte au conteneur */
+	height: 100%;
 }
 
 /* Section "Comment ça marche" */
@@ -197,29 +305,32 @@ header{ /* Zone du header */
 }
 
 .how-this-works{
-	display: flex;
+	display: grid;
     justify-content: center;
     align-items: center;
 }
 
 .how-this-works h1{
 	color: var(--white);
-	font-size: 10.8rem;
+	font-size: 9rem;
 	line-height: 100%;
-	padding: 0 0 6.25rem 0;
+	padding: 0 0 3rem 0;
+	place-self: center;
 }
 
+
 .video-how-this-works img{
-	position: relative;
 	height: auto;
 	max-width: 90%;
 	border-radius: var(--radius);
 }
 
-.icon-youtube {
+.icon-youtube{
+	display: flex;
     fill: var(--green);
     position: absolute;
 	transform: scale(3.5);
+	top: 3;
 }
 
 .icon-youtube:hover{
@@ -233,16 +344,17 @@ header{ /* Zone du header */
 }
 
 .join-us{
-	display: flex;
+	display: block;
     justify-content: center;
     align-items: center;
 }
 
 .join-us h1{
 	color: var(--white);
-	font-size: 10.8rem;
+	font-size: 9rem;
 	line-height: 100%;
-	padding: 0 0 6.25rem 0;
+	padding: 0 0 3rem 0;
+	place-self: center;
 }
 
 .join-us iframe{
@@ -250,34 +362,156 @@ header{ /* Zone du header */
 }
 
 @media screen and (max-width: 1350px){
+	:root{
+        --grid-gap: 2rem;
+      }
+
 	.container{
-		width: 1000px;
+        width: 1000px;
+		margin-inline: auto;
+    }
+
+    .col-md-1{grid-column: span 1;}
+	.col-md-2{grid-column: span 2;}
+	.col-md-3{grid-column: span 3;}
+	.col-md-4{grid-column: span 4;}
+	.col-md-5{grid-column: span 5;}
+	.col-md-6{grid-column: span 6;}
+	.col-md-7{grid-column: span 7;}
+	.col-md-8{grid-column: span 8;}
+	.col-md-9{grid-column: span 9;}
+	.col-md-10{grid-column: span 10;}
+	.col-md-11{grid-column: span 11;}
+	.col-md-12{grid-column: span 12;}
+
+
+	.header{
+		align-items: center;
 	}
+	
+	.super-agence-title{
+		color: var(--white);
+		font-size: 2.8rem;
+		display: inline-block;
+		align-items: center;
+	}
+	
+	.header-right{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	
+	.header-text a{
+		margin: 1.5rem;
+		color: var(--white);
+		font-size: 2.2rem;
+	}
+	
+	.header-icons{
+		transform: scale(1.1);
+	}
+	
+	.header-icons a{
+		margin: 1rem;
+	}
+
 }
 
 
 
-@media screen and (max-width: 1050px){
-	.container{
-		width: 800px;
+@media screen and (max-width: 1050px){ /* Ordinateur */
+	:root{
+        --grid-gap: 1.5rem;
+      }
+
+    .container{
+        width: 800px;
+		margin-inline: auto;
+    }
+
+    .col-sm-1{grid-column: span 1;}
+	.col-sm-2{grid-column: span 2;}
+	.col-sm-3{grid-column: span 3;}
+	.col-sm-4{grid-column: span 4;}
+	.col-sm-5{grid-column: span 5;}
+	.col-sm-6{grid-column: span 6;}
+	.col-sm-7{grid-column: span 7;}
+	.col-sm-8{grid-column: span 8;}
+	.col-sm-9{grid-column: span 9;}
+	.col-sm-10{grid-column: span 10;}
+	.col-sm-11{grid-column: span 11;}
+	.col-sm-12{grid-column: span 12;}
+	
+	.super-agence-title{
+		font-size: 2.8rem;
+	}
+	
+	.header-right{
+		gap: 1rem;
+	}
+	
+	.header-text a{
+		margin: 1rem;
+		font-size: 1.7rem;
+	}
+	
+	.header-icons{
+		transform: scale(0.9);
+	}
+	
+	.header-icons a{
+		margin: 1rem;
 	}
 
+	.join-us h1{
+		font-size: 6.5rem;
+		padding: 0 0 3rem 0;
+	}
 }
 
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px){ /* Tablette */
 	.container{
-		width: 600px;
+		width: 650px;
+		margin-inline: auto;
+	}
+
+	.col-tab-5{grid-column: span 5;}
+	.col-tab-6{grid-column: span 7;}
+
+	.super-agence-title{
+		font-size: 2.4rem;
+	}
+	
+	.header-right{
+		gap: 1rem;
+	}
+	.header-text a{
+		margin: 1rem;
+		font-size: 1.8rem;
+	}
+	
+	.header-icons{
+		transform: scale(0.8);
+	}
+	
+	.header-icons a{
+		margin: 0.4rem;
+	}
+
+	.join-us h1{
+		font-size: 7rem;
+		padding: 0 0 3rem 0;
 	}
 	
 }
 
-
-
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px){ /* Mobile */
 	.container{
-		width: 100%;
-		padding-inline: 2rem;
+		width: 90%;
+		padding-inline: 0.5rem;
 	}
 
 	.h1{
@@ -295,8 +529,47 @@ header{ /* Zone du header */
 	   line-height: calc(4.3rem / 1.5);
 	}
 
-}
+	
+	.super-agence-title{
+		font-size: 2.4rem;
+	}
+	
+	.header-text a{
+		display: none;
+	}
+	
+	.header-icons{
+		display: none;
+	}
 
+	.hbg{
+		display: flex;
+		width: 60px;
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+		gap: .7rem;
+	}
+	
+	.hbg span{
+		display: inline-block;
+		width: 70%;
+		height: 4px;
+		background-color: var(--white);
+		border-radius: var(--radius);
+	}
+
+
+	.join-us h1{
+		font-size: 5.5rem;
+		padding: 0 0 3rem 0;
+	}
+
+	.join-us iframe{
+		border-radius: 0;
+	}
+}
 
 footer {
     display: flex;
