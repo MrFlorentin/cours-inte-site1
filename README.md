@@ -11,6 +11,7 @@ Cours de Nicolas dans le cadre d'un TP sur un site à intégrer en HTML & CSS.
 
 - [@MrFlorentin](https://www.github.com/mrflorentin)
 - [@NoahBus](https://www.github.com/noahbus)
+- Quentin
 
 
 ## Fonctionnalités
