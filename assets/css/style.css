@@ -1,3 +1,4 @@
+
 /*BASE*/
 
 *,::after,::before{
@@ -351,17 +352,91 @@ header{ /* Zone du header */
 	font-size: 4.5rem;
 }
 
+/* Section "Business Strategy" */
+.sec-3 .row{
+	gap: 6rem;
+	align-items: normal;
+}
+
+.sticky-text{
+    position: sticky;
+	align-self: start;
+    top: 10rem;
+    z-index: 10;
+}
+
+.sec-3-title{
+	color: var(--green);
+	font-size: 6rem;
+	line-height: 10rem;
+	margin: 2rem 0;
+}
+
+.sec-3-subtitle span{
+	color: var(--dark-grey);
+	font-size: 2.75rem;
+}
+
+.stage-1{
+	border: 3px solid var(--dark-green);
+	border-radius: var(--radius);
+	padding: 5rem;
+	margin: 4rem 0rem;
+}
+
+.stage-2{
+	border: 3px solid var(--dark-green);
+	border-radius: var(--radius);
+	padding: 5rem;
+	margin: 4rem 0rem;
+}
+
+.stage-3{
+	border: 3px solid var(--dark-green);
+	border-radius: var(--radius);
+	padding: 5rem;
+	margin: 4rem 0rem 6rem 0rem;
+}
+
+.stage-btn{
+	display: inline-flex;
+	justify-content: start;
+}
+
+.stage-btn .btn{
+	font-size: 1.5rem;
+	color: var(--dark-green);
+	background: var(--yellow);
+	padding: 1.5rem 2rem;
+}
+
+.stage-btn .white-box{
+	color: var(--white);
+	background: var(--dark-green);
+}
+
+.icon-arrow{
+	fill: var(--dark-green);
+	width: 3rem;
+	height: 3rem;
+	margin: 0rem 2rem;
+}
+
+.stage-title{
+	font-size: 3rem;
+	color: var(--green);
+	margin: 4rem 0;
+}
+
+.stage-desc{
+	color: var(--dark-grey);
+}
+
 /* Section "Comment ça marche" */
 .sec-4{
 	background: var(--green);
 	height: 100%;
 }
-
-/* .how-this-works{
-	display: grid;
-    justify-content: center;
-    align-items: center;
-} */
 
 .how-this-works h1{
 	color: var(--white);
@@ -465,13 +540,6 @@ header{ /* Zone du header */
 	border-radius: var(--radius);
 	transition: ease .5s;
 }
-
-/* .animation-duplication{
-	height: 100rem;
-	width: 100rem;
-	background: var(--yellow);
-	border-radius: var(--radius);
-} */
 
 .sec-team img{
 	border-radius: var(--radius) var(--radius) 0 0;
@@ -1005,6 +1073,60 @@ header{ /* Zone du header */
 		font-size: 3.5rem;
 	}
 
+	/* Section "Stage" */
+	.sec-3-title{
+		font-size: 5rem;
+		line-height: 8rem;
+	}
+	
+	.sec-3-subtitle span{
+		font-size: 2rem;
+	}
+
+	.stage-btn .btn{
+		font-size: 1.25rem;
+		padding: 1rem 1rem;
+	}
+	
+	.stage-btn .white-box{
+		font-size: 1.3rem;
+		padding: 0 1rem;
+	}
+	
+	.icon-arrow{
+		fill: var(--dark-green);
+		width: 3rem;
+		height: 3rem;
+		margin: 0rem 1rem;
+	}
+
+	.stage-title{
+		font-size: 2rem;
+		margin: 2rem 0;
+	}
+
+	.stage-desc{
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.stage-1{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-2{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-3{
+		border: 3px solid var(--dark-green);
+		border-radius: var(--radius);
+		padding: 2rem;
+		margin: 3rem 0rem 5rem 0rem;
+	}
+
 	.join-us h1{
 		font-size: 6.5rem;
 		padding: 0 0 3rem 0;
@@ -1204,6 +1326,65 @@ header{ /* Zone du header */
 	.sec-management-solo h2{
 		font-size: 3rem;
 	}
+
+	/* Section "Stage" */
+	.sec-3 .row{
+		gap: 1rem;
+	}
+
+	.sec-3-title{
+		font-size: 4rem;
+		line-height: 7rem;
+	}
+	
+	.sec-3-subtitle span{
+		font-size: 1.7rem;
+	}
+
+	.stage-btn .btn{
+		font-size: 1rem;
+		padding: 1rem 1rem;
+	}
+	
+	.stage-btn .white-box{
+		font-size: 1.1rem;
+		padding: 0 1rem;
+	}
+	
+	.icon-arrow{
+		fill: var(--dark-green);
+		width: 3rem;
+		height: 3rem;
+		margin: 0rem 1rem;
+	}
+
+	.stage-title{
+		font-size: 2rem;
+		margin: 2rem 0;
+	}
+
+	.stage-desc{
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.stage-1{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-2{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-3{
+		border: 3px solid var(--dark-green);
+		border-radius: var(--radius);
+		padding: 2rem;
+		margin: 3rem 0rem 5rem 0rem;
+	}
+	
 
 	.join-us h1{
 		font-size: 7rem;
@@ -1427,6 +1608,106 @@ header{ /* Zone du header */
 		line-height: 2.5rem;
 	}
 
+	/* Section "Stage" */
+	.sec-3 .row{
+		gap: 0rem;
+	}
+
+	.sec-3-title{
+		font-size: 6.5rem;
+		line-height: 7rem;
+	}
+	
+	.sec-3-subtitle span{
+		font-size: 2rem;
+	}
+
+	/* Section "Stage" */
+	.sec-3 .row{
+		gap: 1rem;
+	}
+
+	.sticky-text{
+		position: relative;
+		align-self: start;
+		top: 0rem;
+		z-index: 0;
+	}
+
+	.sec-3-title{
+		font-size: 4rem;
+		line-height: 7rem;
+	}
+	
+	.sec-3-subtitle span{
+		font-size: 1.7rem;
+	}
+
+	.sec-3 .btn_rocket{
+		place-self: center;
+		display: block;
+	}
+
+	.stage-btn .btn{
+		font-size: 1.3rem;
+		padding: 1rem 1rem;
+	}
+
+	.sec-3 h1{
+		place-self: center;
+	}
+
+	.sec-3 .sec-3-subtitle span{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.stage-btn .white-box{
+		font-size: 1.3rem;
+		padding: 0 1rem;
+	}
+	
+	.icon-arrow{
+		fill: var(--dark-green);
+		width: 3rem;
+		height: 3rem;
+		margin: 0rem 1rem;
+	}
+
+	.sec-3 .white-box{
+		padding: 0.5rem 2rem;
+	}
+
+	.stage-title{
+		font-size: 2rem;
+		margin: 2rem 0;
+	}
+
+	.stage-desc{
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding-right: 1rem;
+		padding-bottom: 2rem;
+	}
+
+	.stage-1{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-2{
+		padding: 2rem;
+		margin: 3rem 0rem;
+	}
+	
+	.stage-3{
+		border: 3px solid var(--dark-green);
+		border-radius: var(--radius);
+		padding: 2rem;
+		margin: 3rem 0rem 5rem 0rem;
+	}
+
 	.join-us h1{
 		font-size: 5.5rem;
 		padding: 0 0 3rem 0;
@@ -1552,7 +1833,7 @@ header{ /* Zone du header */
 	}
 }
 
-footer {
+footer{
     display: flex;
     background-color:#04482D;  
     color:#fff;
